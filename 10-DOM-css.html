@@ -4,18 +4,27 @@
     <title>DOM Project</title>
 <style>
   .btn-sub{
-  border : none;
-  padding : 10px 15px 10px 15px ;
+  border: none;
+  padding: 10px 15px 10px 15px;
   font-weight: bold;
   border-radius:  50px;
-  background-color: black;
-  color: white
-  };
+  background-color: rgb(22, 22, 22);
+  color: white;
+  cursor: pointer;
+  }
+
+  .is-subscribed {
+    background-color: rgb(57, 199, 57);
+    color: rgb(255, 255, 255);
+    border: solid 1px rgb(27, 129, 27);
+  }
+
 </style>
   </head>
 <body>
   <p>Youtube Subscribe button</p>
-<button onclick="subscribe()" class="btn-sub">Subscribe</button>
+<button onclick="subscribe();
+" class="btn-sub">Subscribe</button>
 
 <p>Amazon style shipping calculator</p>
 <p>Order under 40€ => +10€ shipping fees</p>
@@ -50,8 +59,11 @@ calculateTotal();
             const btn = document.querySelector('.btn-sub');
         if (btn.innerText === 'Subscribe') {
           btn.innerText = 'Subscribed';
+          btn.classList.add('is-subscribed')
         } else {
           btn.innerText = 'Subscribe';
+          btn.classList.remove('is-subscribed')
+
         }
       }
   </script>
