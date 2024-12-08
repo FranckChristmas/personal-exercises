@@ -8,7 +8,35 @@
   <p>Youtube Subscribe button</p>
 <button onclick="subscribe()" class="btn-sub">Subscribe</button>
 
+<p>Amazon style shipping calculator</p>
+<p>Order under 40€ => +10€ shipping fees</p>
+<p>Order over 40€ => free shipping</p>
+<input type="text" placeholder="cost of order" class="js-input" onkeydown="
+keydownCalculate(event);
+"> 
+<button onclick="
+calculateTotal();
+">Calculate price</button>
+<p class="js-total"></p>
+
   <script>
+    function keydownCalculate(event) {
+      if (event.key === 'Enter') {
+        calculateTotal();
+        };
+      };
+    function calculateTotal() {
+      const inputElement = document.querySelector('.js-input');
+      console.log(inputElement.value);
+      let cost = Number(inputElement.value);
+      if (cost < 40) {
+        cost += 10;
+      }
+        document.querySelector('.js-total').innerHTML = `${cost}€`;
+    };
+
+
+
     function subscribe() {
             const btn = document.querySelector('.btn-sub');
         if (btn.innerText === 'Subscribe') {
