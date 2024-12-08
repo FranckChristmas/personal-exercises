@@ -1,0 +1,33 @@
+body {
+  background-color: rgb(27, 27, 27);
+  color: aliceblue;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.title {
+  font-size: 30px;
+  font-weight: bolder;
+}
+
+.moves {
+  font-size: 60px;
+  border: solid 2px rgb(249, 239, 239);
+  background-color: transparent;
+  padding: 10px 20px 10px 20px;
+  margin-right: 15px;
+  border-radius: 100%;
+  cursor: pointer;
+}
+
+.result {
+  font-size: 30px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.reset-btn {
+  background-color: rgb(27, 27, 27);
+color: white;
+padding: 10px 15px 10px 15px;
+border-radius: 50px;
+border: solid 1px whitesmoke;
+}
