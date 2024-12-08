@@ -3,6 +3,10 @@
   <head>
     <title>DOM Project</title>
 <style>
+    body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
   .btn-sub{
   border: none;
   padding: 10px 15px 10px 15px;
@@ -16,8 +20,21 @@
   .is-subscribed {
     background-color: rgb(57, 199, 57);
     color: rgb(255, 255, 255);
-    border: solid 1px rgb(27, 129, 27);
+    border: solid 1px rgb(71, 124, 71);
   }
+  .cost-input {
+    font-size: 15px;
+    padding: 8px;
+
+  }
+
+  .calculate-btn{
+    background-color: rgb(27, 27, 27);
+    color: white;
+    padding: 10px 15px 10px 15px;
+    border-radius: 50px;
+  }
+
 
 </style>
   </head>
@@ -29,10 +46,10 @@
 <p>Amazon style shipping calculator</p>
 <p>Order under 40€ => +10€ shipping fees</p>
 <p>Order over 40€ => free shipping</p>
-<input type="text" placeholder="cost of order" class="js-input" onkeydown="
+<input type="text" placeholder="cost of order" class="js-input cost-input" onkeydown="
 keydownCalculate(event);
 "> 
-<button onclick="
+<button class="calculate-btn" onclick="
 calculateTotal();
 ">Calculate price</button>
 <p class="js-total"></p>
