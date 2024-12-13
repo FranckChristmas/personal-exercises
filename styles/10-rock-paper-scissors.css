@@ -18,6 +18,10 @@ body {
   cursor: pointer;
 }
 
+.move-this:hover{
+  background-color: rgb(158, 158, 158);
+}
+
 .result {
   font-size: 30px;
   font-weight: bold;
